@@ -11,10 +11,11 @@
  */
 
 var maxCoins = function(piles) {
-    const start = piles.length / 3;
     piles.sort((a, b) => a - b);
     let res = 0;
-    for(let i = start; i < piles.length; i+=2) res += piles[i];
+    for(let i = 1;
+        i < piles.length; i+=3) 
+        res += piles[i];
     console.log(res);
 };
 
